@@ -301,7 +301,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 input,
@@ -332,12 +332,13 @@ a:focus {
 
 img {
   vertical-align: middle;
+  horizontal-align: middle;
 }
 
 .img-responsive {
   display: block;
-  height: auto;
-  max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img-rounded {
@@ -350,7 +351,7 @@ img {
   max-width: 100%;
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #ffffff;
+  background-color: #000000;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -743,7 +744,7 @@ code {
   font-size: 90%;
   color: #c7254e;
   white-space: nowrap;
-  background-color: #f9f2f4;
+  background-color: #000000;
   border-radius: 4px;
 }
 
@@ -756,7 +757,7 @@ pre {
   color: #333333;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f5f5f5;
+  background-color: #000000;
   border: 1px solid #cccccc;
   border-radius: 4px;
 }
@@ -766,7 +767,7 @@ pre code {
   font-size: inherit;
   color: inherit;
   white-space: pre-wrap;
-  background-color: transparent;
+  background-color: 000000;
   border-radius: 0;
 }
 
