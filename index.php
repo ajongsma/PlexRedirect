@@ -242,8 +242,8 @@
 			<div class="col-lg-4">
 				<a href="http://pooky.local:19999" target="_top">
 					<div data-netdata="netdata.net"
-						data-dimensions="in"
-						data-common-max="netdata-net-in"
+						data-dimensions="out"
+						data-common-max="netdata-net-out"
 						data-decimal-digits="0"
 						data-title="Requests Traffic"
 						data-chart-library="easypiechart"
@@ -252,7 +252,7 @@
 						data-after="-300"
 						data-points="300"
 					></div>
-				<p>Current Server System Netdata In</p></a>
+				<p>Current Server System Netdata Out</p></a>
 			</div>
 			
 		</div>
