@@ -255,8 +255,7 @@
 				<p>Current Server System Netdata Out</p></a>
 			</div>
 
-			
-			div class="col-lg-4">
+			<div class="col-lg-4">
 				<a href="http://pooky.local:19999" target="_top">
 					<div data-netdata="system.ipv4"
 						data-chart-library="sparkline"
