@@ -157,7 +157,7 @@ setTimeout(function(){
 			<a href="http://pooky.local:19999" target="_top">
 				<div data-netdata="system.cpu"
 					data-gauge-max-value="100"
-					data-host="YOUR NETDATA HOST"
+					data-host="pooky.local"
 					data-title="CPU Usage"
 					data-chart-library="gauge"
 					data-colors="#f8a918"
