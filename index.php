@@ -254,6 +254,22 @@
 					></div>
 				<p>Current Server System Netdata Out</p></a>
 			</div>
+
+			
+			div class="col-lg-4">
+				<a href="http://pooky.local:19999" target="_top">
+					<div data-netdata="system.ipv4"
+						data-chart-library="sparkline"
+						data-width="100%"
+						data-height="30"
+						data-after="-300"
+						data-dt-element-name="time102"
+					></div>
+				<p>rendered in <span id="time102">X</span> ms<</p></a>
+			</div>
+			
+			
+			
 			
 		</div>
 	</div>
