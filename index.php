@@ -157,7 +157,7 @@
 			<a href="http://pooky.local:19999" target="_top">
 				<div data-netdata="system.cpu"
 					data-gauge-max-value="100"
-					data-host="pooky.local:19999"
+					data-host="http://pooky.local:19999"
 					data-title="CPU Usage"
 					data-chart-library="gauge"
 					data-colors="#f8a918"
@@ -192,17 +192,17 @@
 			<div class="col-lg-4">
 			<a href="YOUR URL" target="_top">
 				<div data-netdata="netdata.response_time"
-						data-host="YOUR NETDATA HOST"
-                        data-title="Response Time"
-                        data-chart-library="gauge"
-						data-colors="#f8a918"
-						data-units="Milliseconds"
-						data-width="180px"
-						data-height="180px"
-                        data-after="-300"
-                        data-points="300"
-                        ></div>
-			<p>Current Server Response Time</p></a>
+					data-host="pooky.local:19999"
+					data-title="Response Time"
+					data-chart-library="gauge"
+					data-colors="#f8a918"
+					data-units="Milliseconds"
+					data-width="180px"
+					data-height="180px"
+					data-after="-300"
+					data-points="300"
+				></div>
+				<p>Current Server Response Time</p></a>
 			</div>	
 		</div>
 	</div>
