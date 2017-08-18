@@ -140,6 +140,16 @@ setTimeout(function(){
 					<p>Powered by PlexPy by JonnyWong16. Docker by LinuxServer.io</p>
 				</a>
 				
+				<?php if (strlen($SERVER_STATS_URL) > 0) { ?>
+				<a href="//<?=$SERVER_STATS_URL?>" target="_blank">
+					<img src="assets/img/server.svg" width="180" alt="">
+					<h4>Server Stats</h4>
+					<p>Graphical Server Information Including CPU, Network, Harddrive and Memory.</p>
+					<?php } elseif ($SERVER_STATS_DESATURATE == True) { ?>
+					<img src="assets/img/server.svg" width="180" class="desaturate" alt="">
+					<h4>Server stats, coming soon!</h4>
+					<?php } ?>
+				</a>
 				
 			</div>
 			
