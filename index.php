@@ -22,7 +22,7 @@
 	<script>var netdataTheme = 'slate';</script>
 	<script>var netdataDontStart = true;</script>
 	<script>var netdataNoBootstrap = true;</script>
-	<script type="text/javascript" src="/dashboard.js"></script>	
+	<script type="text/javascript" src="http://pooky.local:19999/dashboard.js"></script>
 	<script>
 		// destroy charts not shown (lowers memory on the browser)
 		NETDATA.options.current.destroy_on_hide = false;
