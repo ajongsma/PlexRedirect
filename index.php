@@ -266,6 +266,20 @@
 					></div>
 				<p>rendered in <span id="time102">X</span> ms</p></a>
 			</div>
+
+			<div class="col-lg-4">
+				<a href="http://pooky.local:19999" target="_top">
+					<div data-netdata="system.ipv4"
+						data-title="IPv4 traffic on your netdata server"
+						data-common-max="traffic"
+						data-common-min="traffic"
+						data-chart-library="dygraph"
+						data-width="49%"
+						data-height="100%"
+						data-after="-300"
+					></div>
+				<p>rendered in <span id="time102">X</span> ms</p></a>
+			</div>
 			
 			
 			
