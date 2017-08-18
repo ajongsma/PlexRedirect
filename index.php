@@ -93,7 +93,7 @@ setTimeout(function(){
         }
     </script>
 	
-<title>YOUR SERVER NAME</title>
+<title><?=ucfirst($SERVER_NAME)?></title>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles -->
