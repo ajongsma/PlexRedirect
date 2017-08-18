@@ -1,4 +1,4 @@
-# Fork of PlexRedirect, now with NetData!
+# Fork of PlexRedirect with NetData!
 ![alt tag](https://i.imgur.com/ML30ZKQ.png)
 
 ## Features:
