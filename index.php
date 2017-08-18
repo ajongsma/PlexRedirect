@@ -210,7 +210,7 @@
 					<div data-netdata="system.load"
 						data-gauge-max-value="100"
 						data-host="http://pooky.local:19999"
-						data-title="CPU Usage"
+						data-title="System Load Average"
 						data-chart-library="gauge"
 						data-colors="#f8a918"
 						data-units="Percent"
@@ -219,7 +219,7 @@
 						data-after="-300"
 						data-points="300"
 						></div>
-				<p>Current Server CPU Usage</p></a>
+				<p>Current Server System Load Average</p></a>
 			</div>
 			
 			
