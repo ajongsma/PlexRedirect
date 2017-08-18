@@ -1,7 +1,7 @@
 <?php
 
 // The displayed name of the server
-$SERVER_NAME = 'my Plex server';
+$SERVER_NAME = 'PlexRedirect - my Plex server';
 
 // The actual URL of the server
 $SERVER_URL = $_SERVER['SERVER_NAME'];
@@ -16,15 +16,15 @@ $PLEX_REQUESTS = $SERVER_URL.':3000/search';
 // $PLEX_URL = 'app.plex.tv/web/app';
 $PLEX_URL = $PLEX_SERVER;
 
+//Server Stats URL
+$SERVER_STATS_URL = $SERVER_URL.':19999';
+//Set to true to show a desaturated logo
+$SLACK_DESATURATE = false ;
+
 //Slack Team URL
 $SLACK_URL = "" ;
 //Set to true to show a desaturated logo
 $SERVER_STATS_DESATURATE = false ;
-
-//Server Stats URL
-$SERVER_STATS_URL = "" ;
-//Set to true to show a desaturated logo
-$SLACK_DESATURATE = false ;
 
 
 // DONATE (leave both blank to hide Donate section)
