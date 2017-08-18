@@ -264,7 +264,7 @@
 						data-after="-300"
 						data-dt-element-name="time102"
 					></div>
-				<p>rendered in <span id="time102">X</span> ms<</p></a>
+				<p>rendered in <span id="time102">X</span> ms</p></a>
 			</div>
 			
 			
