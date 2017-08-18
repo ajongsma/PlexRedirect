@@ -23,86 +23,86 @@
 	<script>var netdataDontStart = true;</script>
 	<script>var netdataNoBootstrap = true;</script>
 	<script type="text/javascript" src="/dashboard.js"></script>	
-<script>
-// destroy charts not shown (lowers memory on the browser)
-NETDATA.options.current.destroy_on_hide = false;
+	<script>
+		// destroy charts not shown (lowers memory on the browser)
+		NETDATA.options.current.destroy_on_hide = false;
 
-// set this to false, to always show all dimensions
-NETDATA.options.current.eliminate_zero_dimensions = true;
+		// set this to false, to always show all dimensions
+		NETDATA.options.current.eliminate_zero_dimensions = true;
 
-// always update the charts, even if focus is lost. THIS IS NOT ON BY DEFAULT AND CAN BE RESOURCE INTENSIVE
-NETDATA.options.current.stop_updates_when_focus_is_lost = false;
+		// always update the charts, even if focus is lost. THIS IS NOT ON BY DEFAULT AND CAN BE RESOURCE INTENSIVE
+		NETDATA.options.current.stop_updates_when_focus_is_lost = false;
 
-// This will reload the page every 10 mins
-var RELOAD_EVERY = 10;
-setTimeout(function(){
-    location.reload();
-}, RELOAD_EVERY * 60 * 1000);
-</script>
+		// This will reload the page every 10 mins
+		var RELOAD_EVERY = 10;
+		setTimeout(function(){
+				location.reload();
+		}, RELOAD_EVERY * 60 * 1000);
+	</script>
 	
-    <script src="assets/js/ping.js"></script>
-    <script type='text/javascript'>
-        HTMLElement.prototype.hasClass = function (className) {
-            if (this.classList) {
-                return this.classList.contains(className);
-            } else {
-                return (-1 < this.className.indexOf(className));
-            }
-        };
+	<script src="assets/js/ping.js"></script>
+	<script type='text/javascript'>
+		HTMLElement.prototype.hasClass = function (className) {
+					if (this.classList) {
+							return this.classList.contains(className);
+					} else {
+							return (-1 < this.className.indexOf(className));
+					}
+			};
 
-        HTMLElement.prototype.addClass = function (className) {
-            if (this.classList) {
-                this.classList.add(className);
-            } else if (!this.hasClass(className)) {
-                var classes = this.className.split(" ");
-                classes.push(className);
-                this.className = classes.join(" ");
-            }
-            return this;
-        };
+			HTMLElement.prototype.addClass = function (className) {
+					if (this.classList) {
+							this.classList.add(className);
+					} else if (!this.hasClass(className)) {
+							var classes = this.className.split(" ");
+							classes.push(className);
+							this.className = classes.join(" ");
+					}
+					return this;
+			};
 
-        HTMLElement.prototype.removeClass = function (className) {
-            if (this.classList) {
-                this.classList.remove(className);
-            } else {
-                var classes = this.className.split(" ");
-                classes.splice(classes.indexOf(className), 1);
-                this.className = classes.join(" ");
-            }
-            return this;
-        };
+			HTMLElement.prototype.removeClass = function (className) {
+					if (this.classList) {
+							this.classList.remove(className);
+					} else {
+							var classes = this.className.split(" ");
+							classes.splice(classes.indexOf(className), 1);
+							this.className = classes.join(" ");
+					}
+					return this;
+			};
 
-        function checkServer() {
-            var p = new Ping();
-            var server = "YOUR SERVER URL HERE (PLEX.DOMAIN.COM)" //Try to get it automagically, but you can manually specify this
-            var timeout = 2000; //Milliseconds
-            var body = document.getElementsByTagName("body")[0];
-            p.ping(server, function(data) {
-                var serverMsg = document.getElementById( "server-status-msg" );
-                var serverImg = document.getElementById( "server-status-img" );
-                if (data < 1000){
-                    serverMsg.innerHTML ='Online';
-                    serverImg.src = "assets/img/ipad-hand-on.png";
-                    body.addClass('online').removeClass("offline");
-					NETDATA.start();
-                }else{
-                    serverMsg.innerHTML = 'Offline. Try again later.';
-                    serverImg.src = "assets/img/ipad-hand-off.png";
-                } 
-            }, timeout);
-        }
-    </script>
+			function checkServer() {
+					var p = new Ping();
+					var server = "YOUR SERVER URL HERE (PLEX.DOMAIN.COM)" //Try to get it automagically, but you can manually specify this
+					var timeout = 2000; //Milliseconds
+					var body = document.getElementsByTagName("body")[0];
+					p.ping(server, function(data) {
+						var serverMsg = document.getElementById( "server-status-msg" );
+						var serverImg = document.getElementById( "server-status-img" );
+						if (data < 1000){
+							serverMsg.innerHTML ='Online';
+							serverImg.src = "assets/img/ipad-hand-on.png";
+							body.addClass('online').removeClass("offline");
+							NETDATA.start();
+						}else{
+							serverMsg.innerHTML = 'Offline. Try again later.';
+							serverImg.src = "assets/img/ipad-hand-off.png";
+						} 
+					}, timeout);
+			}
+	</script>
 	
-<title><?=ucfirst($SERVER_NAME)?></title>
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom styles -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <!-- Fonts from Google Fonts -->
+	<title><?=ucfirst($SERVER_NAME)?></title>
+	<!-- Bootstrap core CSS -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Custom styles -->
+	<link href="assets/css/main.css" rel="stylesheet">
+	<!-- Fonts from Google Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
-  </head>
+</head>
 
-  <body bgcolor="#000000" onload="checkServer()" class="offline">
+<body bgcolor="#000000" onload="checkServer()" class="offline">
     <div class="container" id="link-bar">
 		<div class="row mt centered">
 			<div class="col-lg-4">
