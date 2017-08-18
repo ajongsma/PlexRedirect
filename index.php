@@ -221,7 +221,39 @@
 						></div>
 				<p>Current Server System Load Average</p></a>
 			</div>
+	
+			<div class="col-lg-4">
+				<a href="http://pooky.local:19999" target="_top">
+					<div data-netdata="netdata.net"
+						data-dimensions="in"
+						data-common-max="netdata-net-in"
+						data-decimal-digits="0"
+						data-host="http://registry.my-netdata.io"
+						data-title="Requests Traffic"
+						data-chart-library="easypiechart"
+						data-width="15%"
+						data-height="100%"
+						data-after="-300"
+						data-points="300"
+					></div>
+				<p>Current Server System Netdata In</p></a>
+			</div>
 			
+			<div class="col-lg-4">
+				<a href="http://pooky.local:19999" target="_top">
+					<div data-netdata="netdata.net"
+						data-dimensions="in"
+						data-common-max="netdata-net-in"
+						data-decimal-digits="0"
+						data-title="Requests Traffic"
+						data-chart-library="easypiechart"
+						data-width="15%"
+						data-height="100%"
+						data-after="-300"
+						data-points="300"
+					></div>
+				<p>Current Server System Netdata In</p></a>
+			</div>
 			
 		</div>
 	</div>
