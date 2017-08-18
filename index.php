@@ -154,19 +154,19 @@ setTimeout(function(){
 			
 						
 			<div class="col-lg-4">
-			<a href="YOUR URL" target="_top">
+			<a href="http://pooky.local:19999" target="_top">
 				<div data-netdata="system.cpu"
-						data-gauge-max-value="100"
-						data-host="YOUR NETDATA HOST"
-                        data-title="CPU Usage"
-                        data-chart-library="gauge"
-						data-colors="#f8a918"
-						data-units="Percent"
-						data-width="180px"
-						data-height="180px"
-                        data-after="-300"
-                        data-points="300"
-                        ></div>
+					data-gauge-max-value="100"
+					data-host="YOUR NETDATA HOST"
+					data-title="CPU Usage"
+					data-chart-library="gauge"
+					data-colors="#f8a918"
+					data-units="Percent"
+					data-width="180px"
+					data-height="180px"
+					data-after="-300"
+					data-points="300"
+                        	></div>
 			<p>Current Server CPU Usage</p></a>
 			</div>
 			
