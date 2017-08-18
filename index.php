@@ -203,7 +203,28 @@
 					data-points="300"
 				></div>
 				<p>Current Server Response Time</p></a>
-			</div>	
+			</div>
+			
+			<div class="col-lg-4">
+			<a href="YOUR URL" target="_top">
+				<div data-netdata="system.load"
+					data-dimensions="used|buffers|active|wired"
+					data-append-options="percentage"
+					data-gauge-max-value="100"
+					data-host="http://pooky.local:19999"
+					data-title="RAM Usage"
+					data-chart-library="gauge"
+					data-colors="#f8a918"
+					data-units="Percent"
+					data-width="180px"
+					data-height="180px"
+					data-after="-300"
+					data-points="300"
+				></div>
+				<p>Current Server RAM Usage</p></a>
+			</div>
+			
+			
 		</div>
 	</div>
 	<p>
