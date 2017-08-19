@@ -74,7 +74,7 @@
 
 			function checkServer() {
 					var p = new Ping();
-					var server = "YOUR SERVER URL HERE (PLEX.DOMAIN.COM)" //Try to get it automagically, but you can manually specify this
+					var server = "$PLEX_SERVER";
 					var timeout = 2000; //Milliseconds
 					var body = document.getElementsByTagName("body")[0];
 					p.ping(server, function(data) {
@@ -82,12 +82,14 @@
 						var serverImg = document.getElementById( "server-status-img" );
 						if (data < 1000){
 							serverMsg.innerHTML ='Online';
-							serverImg.src = "assets/img/ipad-hand-on.png";
+							//serverImg.src = "assets/img/ipad-hand-on.png";
+							serverImg.src = "assets/img/up.svg";
 							body.addClass('online').removeClass("offline");
 							NETDATA.start();
 						}else{
 							serverMsg.innerHTML = 'Offline. Try again later.';
-							serverImg.src = "assets/img/ipad-hand-off.png";
+							//serverImg.src = "assets/img/ipad-hand-off.png";
+							serverImg.src = "assets/img/down.svg";
 						} 
 					}, timeout);
 			}
