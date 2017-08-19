@@ -120,10 +120,10 @@
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<a href="YOUR REQUESTS GUI" target="_top">
-					<img src="assets/img/s02-WORK.png" width="180" alt="">
+				<a href="//<?=$PLEX_REQUESTS_URL?>" target="_top">
+					<img src="assets/img/request.svg" width="180" alt="">
 					<h4>Requests</h4>
-					<p>Powered by PlexRequests by lokenx. Docker by LinuxServer.io</p>
+					<p>Powered by PlexRequests by lokenx.</p>
 				</a>
 				
 				<a href="//<?=$PLEX_REQUESTS_URL?>" target="_top">
