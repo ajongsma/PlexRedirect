@@ -7,8 +7,8 @@ $SERVER_NAME = 'PlexRedirect - my Plex server';
 $SERVER_URL = $_SERVER['SERVER_NAME'];
 
 // Plex App URL
-// $PLEX_URL = 'app.plex.tv/web/app';
-$PLEX_APP_URL = $PLEX_SERVER_URL;
+// $PLEX_APP_URL = 'app.plex.tv/web/app';
+$PLEX_APP_URL = $SERVER_URL.':32400/web';
 
 // The URL to ping
 $PLEX_SERVER_URL = $SERVER_URL.':32400/web';
