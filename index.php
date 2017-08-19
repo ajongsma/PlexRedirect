@@ -1,47 +1,49 @@
 <?php
   require('config.php');
+
+	// https://github.com/oshh94/PlexRedirect/blob/master/index.php
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />`
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body.offline #link-bar {
-            display:none;
-        }
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />`
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			body.offline #link-bar {
+				display:none;
+			}
 
-        body.online  #link-bar{
-            display:block;
-        }
-    </style>
+			body.online  #link-bar{
+				display:block;
+			}
+		</style>
 	
-	<script>var netdataTheme = 'slate';</script>
-	<script>var netdataDontStart = true;</script>
-	<script>var netdataNoBootstrap = true;</script>
-	<script type="text/javascript" src="http://pooky.local:19999/dashboard.js"></script>
-	<script>
-		// destroy charts not shown (lowers memory on the browser)
-		NETDATA.options.current.destroy_on_hide = false;
+		<script>var netdataTheme = 'slate';</script>
+		<script>var netdataDontStart = true;</script>
+		<script>var netdataNoBootstrap = true;</script>
+		<script type="text/javascript" src="http://pooky.local:19999/dashboard.js"></script>
+		<script>
+			// destroy charts not shown (lowers memory on the browser)
+			NETDATA.options.current.destroy_on_hide = false;
 
-		// set this to false, to always show all dimensions
-		NETDATA.options.current.eliminate_zero_dimensions = true;
+			// set this to false, to always show all dimensions
+			NETDATA.options.current.eliminate_zero_dimensions = true;
 
-		// always update the charts, even if focus is lost. THIS IS NOT ON BY DEFAULT AND CAN BE RESOURCE INTENSIVE
-		NETDATA.options.current.stop_updates_when_focus_is_lost = false;
+			// always update the charts, even if focus is lost. THIS IS NOT ON BY DEFAULT AND CAN BE RESOURCE INTENSIVE
+			NETDATA.options.current.stop_updates_when_focus_is_lost = false;
 
-		// This will reload the page every 10 mins
-		var RELOAD_EVERY = 10;
-		setTimeout(function(){
+			// This will reload the page every 10 mins
+			var RELOAD_EVERY = 10;
+			setTimeout(function(){
 				location.reload();
-		}, RELOAD_EVERY * 60 * 1000);
-	</script>
+			}, RELOAD_EVERY * 60 * 1000);
+		</script>
 	
-	<script src="assets/js/ping.js"></script>
-	<script type='text/javascript'>
+		<script src="assets/js/ping.js"></script>
+		<script type='text/javascript'>
 		HTMLElement.prototype.hasClass = function (className) {
 					if (this.classList) {
 							return this.classList.contains(className);
@@ -143,7 +145,6 @@
 				<?php } ?>
 			</div>
 			
-						
 			<div class="col-lg-4">
 			<a href="http://pooky.local:19999" target="_top">
 				<div data-netdata="system.cpu"
@@ -273,38 +274,34 @@
 			</div>
 			
 			<?php if($PLEXPY_ENABLED == true) : ?>
-				PLEXPY_ENABLED-TRUE - BLAAAAAATTTTT 
-				<img src="assets/img/server.svg" width="180" alt="">
-				<img src="assets/img/server.svg" width="180" class="desaturate" alt="">
+				PLEXPY_ENABLED-TRUE - BLAAAAAATTTTT
 			<?php else : ?>
 				PLEXPY_ENABLED-FALSE - 0000000111111112222222
-				<img src="assets/img/server.svg" width="180" alt="">
-				<img src="assets/img/server.svg" width="180" class="desaturate" alt="">
 			<?php endif; ?>
 			
 			
 			
 		</div>
 	    
-	    <div class="row mt centered">
-		    SERVER_NAME : <?=$SERVER_NAME?><br>
-		    SERVER_URL : <?=$SERVER_URL?><br>
-		    PLEX_APP_URL : <?=$PLEX_APP_URL?><br>
-		    PLEX_SERVER_URL : <?=$PLEX_SERVER_URL?><br>
-		    PLEX_REQUESTS_URL : <?=$PLEX_REQUESTS_URL?><br>
-		    SERVER_STATS_URL : <?=$SERVER_STATS_URL?><br>
-		    SERVER_STATS_DESATURATE : <?=$SERVER_STATS_DESATURATE?><br>
-		    SLACK_URL : <?=$SLACK_URL?><br>
-		    SLACK_DESATURATE : <?=$SLACK_DESATURATE?><br>
-		    PLEXPY_URL : <?=$PLEXPY_URL?><br>
-		    PLEXPY_API : <?=$PLEXPY_API?><br>
-		    
-		    GOOGLE_CALENDAR_ID : <?=$GOOGLE_CALENDAR_ID?><br>
-		    GOOGLE_CALENDAR_API_KEY : <?=$GOOGLE_CALENDAR_API_KEY?><br>
-		    
-		    DONATE_URL : <?=$DONATE_URL?><br>
-		    PAYPAL_BUTTON_ID : <?=$PAYPAL_BUTTON_ID?>
-	    </div>
+		<div class="row mt centered">
+			SERVER_NAME : <?=$SERVER_NAME?><br>
+			SERVER_URL : <?=$SERVER_URL?><br>
+			PLEX_APP_URL : <?=$PLEX_APP_URL?><br>
+			PLEX_SERVER_URL : <?=$PLEX_SERVER_URL?><br>
+			PLEX_REQUESTS_URL : <?=$PLEX_REQUESTS_URL?><br>
+			SERVER_STATS_URL : <?=$SERVER_STATS_URL?><br>
+			SERVER_STATS_DESATURATE : <?=$SERVER_STATS_DESATURATE?><br>
+			SLACK_URL : <?=$SLACK_URL?><br>
+			SLACK_DESATURATE : <?=$SLACK_DESATURATE?><br>
+			PLEXPY_URL : <?=$PLEXPY_URL?><br>
+			PLEXPY_API : <?=$PLEXPY_API?><br>
+
+			GOOGLE_CALENDAR_ID : <?=$GOOGLE_CALENDAR_ID?><br>
+			GOOGLE_CALENDAR_API_KEY : <?=$GOOGLE_CALENDAR_API_KEY?><br>
+
+			DONATE_URL : <?=$DONATE_URL?><br>
+			PAYPAL_BUTTON_ID : <?=$PAYPAL_BUTTON_ID?>
+		</div>
 		    
 	</div>
 	<p>
@@ -326,12 +323,9 @@
 				<div class="col-lg-6">
 					<img id="server-status-img"  class="img-responsive" src="assets/img/ipad-hand.png" style="width:282px" alt="">
 				</div>
-
-
 			</div><!-- /row -->
 		</div><!-- /row -->
 		</div><!-- /container -->
-	
 	</div><!-- /headerwrap -->
   </body>
 </html>
