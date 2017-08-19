@@ -126,7 +126,7 @@
 					<p>Powered by PlexRequests by lokenx. Docker by LinuxServer.io</p>
 				</a>
 				
-				<a href="//<?=$PLEX_REQUESTS?>" target="_top">
+				<a href="//<?=$PLEX_REQUESTS_URL?>" target="_top">
 					<img src="assets/img/request.svg" width="180" alt="">
 					<h4>Request</h4>
 					<p>Want to watch a Movie or TV Show but it's not currently on Plex? Request it here!</p>
