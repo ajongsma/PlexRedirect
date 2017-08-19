@@ -270,7 +270,7 @@
 				<p>rendered in <span id="time102">X</span> ms</p></a>
 			</div>
 			
-			<?php if(PLEXPY_ENABLED == true) : ?>
+			<?php if($PLEXPY_ENABLED == true) : ?>
 				BLAAAAAATTTTT
 			<?php endif; ?>
 			
