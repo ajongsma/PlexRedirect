@@ -122,7 +122,7 @@
 			</div>
 
 			<div class="col-lg-4">
-				<?php if(GRAVATAR == "true") : ?>
+				<?php if(PLEXPY_ENABLED == "true") : ?>
 					BLAAAAAATTTTT
 				<?php endif; ?>
 				<a href="//<?=$PLEXPY_URL?>" target="_top">
