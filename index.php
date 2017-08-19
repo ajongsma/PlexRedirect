@@ -287,7 +287,24 @@
 		</div>
 	    
 	    <div class="row mt centered">
-	    	PLEX_REQUESTS_URL : <?=$PLEX_REQUESTS_URL?>
+		    SERVER_NAME : <?=$SERVER_NAME?>
+		    PLEX_REQUESTS_URL : <?=$PLEX_REQUESTS_URL?>
+		    SERVER_URL : <?=$SERVER_URL?>
+		    PLEX_APP_URL : <?=$PLEX_APP_URL?>
+		    PLEX_SERVER_URL : <?=$PLEX_SERVER_URL?>
+		    PLEX_REQUESTS_URL : <?=$PLEX_REQUESTS_URL?>
+		    SERVER_STATS_URL : <?=$SERVER_STATS_URL?>
+		    SERVER_STATS_DESATURATE : <?=$SERVER_STATS_DESATURATE?>
+		    SLACK_URL : <?=$SLACK_URL?>
+		    SLACK_DESATURATE : <?=$SLACK_DESATURATE?>
+		    PLEXPY_URL : <?=$PLEXPY_URL?>
+		    PLEXPY_API : <?=$PLEXPY_API?>
+		    
+		    GOOGLE_CALENDAR_ID : <?=$GOOGLE_CALENDAR_ID?>
+		    GOOGLE_CALENDAR_API_KEY : <?=$GOOGLE_CALENDAR_API_KEY?>
+		    
+		    DONATE_URL : <?=$DONATE_URL?>
+		    PAYPAL_BUTTON_ID : <?=$PAYPAL_BUTTON_ID?>
 	    </div>
 		    
 	</div>
