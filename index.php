@@ -122,9 +122,7 @@
 			</div>
 
 			<div class="col-lg-4">
-				<?php if(PLEXPY_ENABLED == "true") : ?>
-					BLAAAAAATTTTT
-				<?php endif; ?>
+				
 				<a href="//<?=$PLEXPY_URL?>" target="_top">
 					<img src="assets/img/s03.png" width="180" alt="">
 					<h4>Stats</h4>
@@ -272,6 +270,9 @@
 				<p>rendered in <span id="time102">X</span> ms</p></a>
 			</div>
 			
+			<?php if(PLEXPY_ENABLED == true) : ?>
+				BLAAAAAATTTTT
+			<?php endif; ?>
 			
 			
 			
