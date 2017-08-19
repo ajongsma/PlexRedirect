@@ -272,12 +272,12 @@
 			
 			<?php if($PLEXPY_ENABLED == true) : ?>
 				PLEXPY_ENABLED-TRUE - BLAAAAAATTTTT 
-				<img src="assets/img/s03.png" width="180" alt="">
-				<img src="assets/img/s03.png" width="180" class="desaturate" alt="">
+				<img src="assets/img/server.svg" width="180" alt="">
+				<img src="assets/img/server.svg" width="180" class="desaturate" alt="">
 			<?php else : ?>
 				PLEXPY_ENABLED-FALSE - 0000000111111112222222
-				<img src="assets/img/s03.png" width="180" alt="">
-				<img src="assets/img/s03.png" width="180" class="desaturate" alt="">
+				<img src="assets/img/server.svg" width="180" alt="">
+				<img src="assets/img/server.svg" width="180" class="desaturate" alt="">
 			<?php endif; ?>
 			
 			
