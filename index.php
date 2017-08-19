@@ -285,6 +285,11 @@
 			
 			
 		</div>
+	    
+	    <div class="row mt centered">
+	    	PLEX_REQUESTS_URL : <?=$PLEX_REQUESTS_URL?>
+	    </div>
+		    
 	</div>
 	<p>
 
