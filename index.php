@@ -122,11 +122,15 @@
 			</div>
 
 			<div class="col-lg-4">
+				<?php } if ($PLEXPY_ENABLED == True) { ?>
 				<a href="//<?=$PLEXPY_URL?>" target="_top">
 					<img src="assets/img/s03.png" width="180" alt="">
 					<h4>Stats</h4>
 					<p>Powered by PlexPy by JonnyWong16.</p>
 				</a>
+				<?php } else { ?>
+					<img src="assets/img/s03.png" width="180" class="desaturate" alt="">
+				<?php } ?>
 				
 				<?php if (strlen($SERVER_STATS_URL) > 0) { ?>
 					<a href="//<?=$SERVER_STATS_URL?>" target="_top">
