@@ -111,12 +111,6 @@
 					<h4>Plex</h4>			
 					<p>Access the Plex library.</p>
 				</a>
-			
-				<a href="https://app.plex.tv/web/app" target="_top">
-					<img src="assets/img/plex.svg" height="180" width="300" alt="">
-					<h4>Access Plex</h4>
-					<p>Access the Plex library with over <strong><?=$MOVIE_COUNT?></strong> Movies & <strong><?=$TV_COUNT?></strong> TV Shows available instantly.<p>
-				</a>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
@@ -128,10 +122,10 @@
 			</div>
 
 			<div class="col-lg-4">
-				<a href="YOUR STATS GUI" target="_top">
+				<a href="//<?=$PLEXPY_URL?>" target="_top">
 					<img src="assets/img/s03.png" width="180" alt="">
 					<h4>Stats</h4>
-					<p>Powered by PlexPy by JonnyWong16. Docker by LinuxServer.io</p>
+					<p>Powered by PlexPy by JonnyWong16.</p>
 				</a>
 				
 				<?php if (strlen($SERVER_STATS_URL) > 0) { ?>
