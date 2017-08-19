@@ -106,10 +106,10 @@
     <div class="container" id="link-bar">
 		<div class="row mt centered">
 			<div class="col-lg-4">
-				<a href="YOUR PLEX GUI" target="_top">
+				<a href="//<?=$PLEX_APP_URL?>" target="_top">
 					<img src="assets/img/s01.png" width="180" alt="">
 					<h4>Plex</h4>			
-					<p>Powered by PMS Pass Branch by Plex Team. Docker by Plex Team</p>
+					<p>Access the Plex library.</p>
 				</a>
 			
 				<a href="https://app.plex.tv/web/app" target="_top">
@@ -123,12 +123,6 @@
 				<a href="//<?=$PLEX_REQUESTS_URL?>" target="_top">
 					<img src="assets/img/request.svg" width="180" alt="">
 					<h4>Requests</h4>
-					<p>Powered by PlexRequests by lokenx.</p>
-				</a>
-				
-				<a href="//<?=$PLEX_REQUESTS_URL?>" target="_top">
-					<img src="assets/img/request.svg" width="180" alt="">
-					<h4>Request</h4>
 					<p>Want to watch a Movie or TV Show but it's not currently on Plex? Request it here!</p>
 				</a>
 			</div>
