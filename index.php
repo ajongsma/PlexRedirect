@@ -272,7 +272,7 @@
 			
 			<?php if($PLEXPY_ENABLED == true) : ?>
 				BLAAAAAATTTTT
-			<?php } else { ?>
+			<?php else : ?>
 				0000000111111112222222
 			<?php endif; ?>
 			
