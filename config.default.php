@@ -12,22 +12,22 @@ $PLEX_SERVER_URL = $SERVER_URL.':32400/web';
 // Plex App URL
 // $PLEX_APP_URL = 'app.plex.tv/web/app';
 $PLEX_APP_URL = $SERVER_URL.':32400/web';
-$PLEX_APP_ENABLED = true;
+$PLEX_APP_ENABLED = true ;
 
 // PlexRequests URL
 $PLEX_REQUESTS_URL = $SERVER_URL.':3000/search';
-$PLEX_REQUESTS_ENABLED = true;
+$PLEX_REQUESTS_ENABLED = true ;
 
 //Server Stats URL
 $SERVER_STATS_URL = $SERVER_URL.':19999';
-$SERVER_STATS_ENABLED = true;
+$SERVER_STATS_ENABLED = true ;
 
 //Set to true to show a desaturated logo
 $SERVER_STATS_DESATURATE = false ;
 
 // PlexPy URL
 $PLEXPY_URL = $SERVER_URL.':8084';
-$PLEXPY_ENABLED = true;
+$PLEXPY_ENABLED = true ;
 // PlexPy API Key
 $PLEXPY_API = '';
 // Comma-separated list of section names to count as Movies
