@@ -122,6 +122,9 @@
 			</div>
 
 			<div class="col-lg-4">
+				<?php if(GRAVATAR == "true") : ?>
+					BLAAAAAATTTTT
+				<?php endif; ?>
 				<a href="//<?=$PLEXPY_URL?>" target="_top">
 					<img src="assets/img/s03.png" width="180" alt="">
 					<h4>Stats</h4>
