@@ -295,7 +295,7 @@ function checkserverport() {
 }
 			
 function checkserverport2($server, $port) {	
-	if (@fsockopen($server, $port, $errno, $errstr, 5)) {
+	if (@fsockopen($server, $port, $errno, $errstr, 1)) {
 		//die('Proxy access not allowed.');
 		echo "open: $port ";
 		$status = true;
