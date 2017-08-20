@@ -291,6 +291,7 @@ function checkserverport2($server, $port) {
 		echo "closed: $port ";
 		$status = false;
 	}
+	echo $errno;
 	echo $errstr;
 	return $status;
 }
