@@ -323,9 +323,9 @@ $errors = 0;
 <div class="infobox">
     <?php
     if ($errors == 0) {
-        echo $online;
+        echo " !!! ONLINE !!!";
     } elseif ($errors > 1) {
-        echo $offline;
+        echo "!!! OFFLINE !!!";
     }
     ?>
 </div>
