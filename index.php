@@ -305,7 +305,9 @@
 <?php
 	$host = "127.0.0.1";
 	$port = "80";
-	if(servercheck($host,$port)){ echo $online; }else{ echo $offline; }
+	$online='<td style="background-color:#00FF00; padding:5px;">Operational</td>'; 
+	$offline='<td style="background-color:#FF0000; padding:5px;">Failed</td>';
+	if(checkserverport($host,$port)){ echo $online; }else{ echo $offline; }
 ?> 			
 			
 		</div>
