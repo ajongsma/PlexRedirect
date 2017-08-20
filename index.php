@@ -95,6 +95,29 @@
 						} 
 					}, timeout);
 			}
+			
+			function checkserverport($server,$port){ 
+				//Check that the port value is not empty 
+				if(empty($port)){ 
+					$port=80; 
+				} 
+				//Check that the server value is not empty 
+				if(empty($server)){ 
+					$server='domain.com'; 
+				} 
+				//Connection 
+				$fp=@fsockopen($server, $port, $errno, $errstr, 1); 
+				//Check if connection is present 
+				if($fp){ 
+					//Return Alive 
+					return 1; 
+				} else{ 
+					//Return Dead 
+					return 0; 
+				} 
+				//Close Connection 
+				fclose($fp); 
+			} 
 	</script>
 	
 	<title><?=ucfirst($SERVER_NAME)?></title>
@@ -279,7 +302,11 @@
 				PLEXPY_ENABLED-FALSE - 0000000111111112222222
 			<?php endif; ?>
 			
-			
+<?php
+	$host = 127.0.0.1;
+	$port = 80;
+	if(servercheck($host,$port)){ echo $online; }else{ echo $offline; }
+?> 			
 			
 		</div>
 	    
