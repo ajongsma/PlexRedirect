@@ -280,7 +280,7 @@
 			<?php endif; ?>
 
 <?php
-function shapeSpace_block_proxy_visits2() {	
+function checkserverport() {	
 	$ports = array(80,81,553,554,1080,3128,4480,6588,8000,8080,19999);
 
 	foreach ($ports as $port) {
@@ -294,7 +294,7 @@ function shapeSpace_block_proxy_visits2() {
 	}
 }
 			
-echo shapeSpace_block_proxy_visits2();			
+echo checkserverport();			
 ?>
 			
 		
