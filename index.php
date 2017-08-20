@@ -280,58 +280,7 @@
 			<?php endif; ?>
 
 			
-			
-<?php
-//Page Variables
-$online = '<td style="background-color:#00FF00; padding:5px;">Operational</td>';
-$offline = '<td style="background-color:#FF0000; padding:5px;">Failed</td>';
-
-//Functions
-function servercheck($server, $port) {
-    //Check that the port value is not empty
-    if (empty($port)) {
-        $port = 80;
-    }
-    //Check that the server value is not empty
-    if (empty($server)) {
-        $server = 'domain.com';
-    }
-    //Connection
-    $fp = @fsockopen($server, $port, $errno, $errstr, 1);
-    //Check if connection is present
-    if ($fp) {
-        //Return Alive
-        return 1;
-    } else {
-        //Return Dead
-        return 0;
-    }
-    //Close Connection
-    fclose($fp);
-}
-
-//Ports and Services to check
-$host = "127.0.0.1";
-$port = "80";
-
-$errors = 0;
-    if(servercheck($host, $port) == 0) {
-        $errors++;
-    }
-?>
-
-<div class="infobox">
-    <?php
-    if ($errors == 0) {
-        echo " !!! ONLINE !!!";
-    } elseif ($errors > 1) {
-        echo "!!! OFFLINE !!!";
-    }
-    ?>
-</div>
-<div class="overallmesssage">
-    <h3></h3>
-</div>			
+		
 		
 		</div>
 	    
