@@ -311,8 +311,8 @@ function servercheck($server, $port) {
 }
 
 //Ports and Services to check
-$host = 127.0.0.1;
-$port = 80;
+$host = "127.0.0.1";
+$port = "80";
 
 $errors = 0;
     if(servercheck($host, $port) == 0) {
