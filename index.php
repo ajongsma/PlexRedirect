@@ -280,21 +280,12 @@
 			<?php endif; ?>
 
 <?php
-function shapeSpace_block_proxy_visits() {
-	$headers = array('CLIENT_IP','FORWARDED','FORWARDED_FOR','FORWARDED_FOR_IP','VIA','X_FORWARDED','X_FORWARDED_FOR','HTTP_CLIENT_IP','HTTP_FORWARDED','HTTP_FORWARDED_FOR','HTTP_FORWARDED_FOR_IP','HTTP_PROXY_CONNECTION','HTTP_VIA','HTTP_X_FORWARDED','HTTP_X_FORWARDED_FOR');
-	
-	foreach ($headers as $header){
-		if (isset($_SERVER[$header])) {
-			die('Proxy access not allowed.');
-		}
-	}
-}
-			
 function shapeSpace_block_proxy_visits2() {	
 	$ports = array(80,81,553,554,1080,3128,4480,6588,8000,8080);
 
 	foreach ($ports as $port) {
-		if (@fsockopen($_SERVER['REMOTE_ADDR'], $port, $errno, $errstr, 5)) {
+		// if (@fsockopen($_SERVER['REMOTE_ADDR'], $port, $errno, $errstr, 5)) {
+		if (@fsockopen("pooky.local", $port, $errno, $errstr, 5)) {
 			die('Proxy access not allowed.');
 			echo "123: $port";
 		} else {
@@ -302,8 +293,7 @@ function shapeSpace_block_proxy_visits2() {
 		}
 	}
 }
-		
-echo shapeSpace_block_proxy_visits();
+			
 echo shapeSpace_block_proxy_visits2();			
 ?>
 			
