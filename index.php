@@ -286,6 +286,7 @@ function checkserverport2($server, $port) {
 		//die('Proxy access not allowed.');
 		echo "open: $port ";
 		$status = true;
+		fclose($fp);
 	} else {
 		echo "closed: $port ";
 		$status = false;
