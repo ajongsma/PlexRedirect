@@ -297,10 +297,10 @@ function checkserverport() {
 function checkserverport2($server, $port) {	
 	if (@fsockopen($server, $port, $errno, $errstr, 5)) {
 		//die('Proxy access not allowed.');
-		echo "open: $port | ";
+		echo "open: $port ";
 		$status = true;
 	} else {
-		echo "closed: $port | ";
+		echo "closed: $port ";
 		$status = false;
 	}
 	return $status;
@@ -308,8 +308,9 @@ function checkserverport2($server, $port) {
 			
 echo checkserverport();
 echo "------";
-echo checkserverport2("pooky.local","80");	
+echo checkserverport2("pooky.local","80");
 echo checkserverport2("pooky.local","19999");
+echo checkserverport2("pooky.local","21");
 ?>
 			
 		
