@@ -302,13 +302,65 @@
 				PLEXPY_ENABLED-FALSE - 0000000111111112222222
 			<?php endif; ?>
 			
+
+			
 <?php
-	$host = "127.0.0.1";
-	$port = "80";
-	$online='<td style="background-color:#00FF00; padding:5px;">Operational</td>'; 
-	$offline='<td style="background-color:#FF0000; padding:5px;">Failed</td>';
-	if(checkserverport($host,$port)){ echo $online; }else{ echo $offline; }
-?> 			
+//Page Variables
+$online = '<td style="background-color:#00FF00; padding:5px;">Operational</td>';
+$offline = '<td style="background-color:#FF0000; padding:5px;">Failed</td>';
+
+//Functions
+function servercheck($server, $port) {
+    //Check that the port value is not empty
+    if (empty($port)) {
+        $port = 80;
+    }
+    //Check that the server value is not empty
+    if (empty($server)) {
+        $server = 'domain.com';
+    }
+    //Connection
+    $fp = @fsockopen($server, $port, $errno, $errstr, 1);
+    //Check if connection is present
+    if ($fp) {
+        //Return Alive
+        return 1;
+    } else {
+        //Return Dead
+        return 0;
+    }
+    //Close Connection
+    fclose($fp);
+}
+
+//Ports and Services to check
+$services = [
+    'Website Access' => ['domain.com' => 80],
+    'Another Service' => ['domain.com' => 443],
+    'Another Service' => ['domain.com' => 21],
+];
+
+$errors = 0;
+foreach($services as $host => $port) {
+    if(servercheck($host, $port) == 0) {
+        $errors++;
+    }
+}
+?>
+
+<div class="infobox">
+    <?php
+    if ($errors == 0) {
+        echo $online;
+    } elseif ($errors > 1) {
+        echo $offline;
+    }
+    ?>
+</div>
+<div class="overallmesssage">
+    <h3></h3>
+</div>
+			
 			
 		</div>
 	    
