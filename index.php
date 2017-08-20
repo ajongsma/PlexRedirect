@@ -279,21 +279,7 @@
 				PLEXPY_ENABLED-FALSE - 0000000111111112222222
 			<?php endif; ?>
 
-<?php
-function checkserverport() {	
-	$ports = array(80,81,553,554,1080,3128,4480,6588,8000,8080,19999);
-
-	foreach ($ports as $port) {
-		// if (@fsockopen($_SERVER['REMOTE_ADDR'], $port, $errno, $errstr, 5)) {
-		if (@fsockopen("pooky.local", $port, $errno, $errstr, 5)) {
-			//die('Proxy access not allowed.');
-			echo "open: $port | ";
-		} else {
-			echo "closed: $port | ";
-		}
-	}
-}
-			
+<?php		
 function checkserverport2($server, $port) {	
 	if (@fsockopen($server, $port, $errno, $errstr, 1)) {
 		//die('Proxy access not allowed.');
@@ -303,10 +289,10 @@ function checkserverport2($server, $port) {
 		echo "closed: $port ";
 		$status = false;
 	}
+	echo $errstr;
 	return $status;
 }
-			
-echo checkserverport();
+
 echo "------";
 echo checkserverport2("pooky.local","80");
 echo checkserverport2("pooky.local","19999");
