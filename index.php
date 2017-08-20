@@ -303,8 +303,8 @@
 			<?php endif; ?>
 			
 <?php
-	$host = 127.0.0.1;
-	$port = 80;
+	$host = "127.0.0.1";
+	$port = "80";
 	if(servercheck($host,$port)){ echo $online; }else{ echo $offline; }
 ?> 			
 			
