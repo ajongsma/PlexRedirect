@@ -281,15 +281,15 @@
 
 <?php
 function shapeSpace_block_proxy_visits2() {	
-	$ports = array(80,81,553,554,1080,3128,4480,6588,8000,8080);
+	$ports = array(80,81,553,554,1080,3128,4480,6588,8000,8080,19999);
 
 	foreach ($ports as $port) {
 		// if (@fsockopen($_SERVER['REMOTE_ADDR'], $port, $errno, $errstr, 5)) {
 		if (@fsockopen("pooky.local", $port, $errno, $errstr, 5)) {
 			//die('Proxy access not allowed.');
-			echo "123: $port";
+			echo "123: $port | ";
 		} else {
-			echo "abc: $port";
+			echo "abc: $port | ";
 		}
 	}
 }
