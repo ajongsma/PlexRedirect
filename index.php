@@ -297,6 +297,8 @@ function shapeSpace_block_proxy_visits2() {
 		if (@fsockopen($_SERVER['REMOTE_ADDR'], $port, $errno, $errstr, 5)) {
 			die('Proxy access not allowed.');
 			echo "123: $port";
+		} else {
+			echo "abc: $port";
 		}
 	}
 }
