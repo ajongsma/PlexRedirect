@@ -95,6 +95,19 @@
 						} 
 					}, timeout);
 			}
+			
+		function checkserverport($server, $port) {	
+			$fp = @fsockopen($server, $port, $errno, $errstr, 5);
+			if ($fp)  {
+				//echo "open: $port ";
+				$status = TRUE;
+				fclose($fp);
+			} else {
+				//echo "closed: $port ";
+				$status = FALSE;
+			}
+			return $status;
+		}	
 	</script>
 	
 	<title><?=ucfirst($SERVER_NAME)?></title>
@@ -280,30 +293,11 @@
 			<?php endif; ?>
 
 <?php		
-function checkserverport($server, $port) {	
-	$fp = @fsockopen($server, $port, $errno, $errstr, 5);
-	if ($fp)  {
-		//die('Proxy access not allowed.');
-		echo "open: $port ";
-		$status = TRUE;
-		fclose($fp);
+	If (checkserverport("pooky.local","19999") === TRUE) {
+		echo "---------- NETDATA - YES ---------- <br>";
 	} else {
-		echo "closed: $port ";
-		$status = FALSE;
+		echo "---------- NETDATA - NOO ---------- <br>";
 	}
-	echo "errno : ", $errno, "<br>";
-	echo "errstr : ", $errstr;
-	return $status;
-}
-
-If (checkserverport("pooky.local","19999") === TRUE) {
-	echo "---------- NETDATA - YES ---------- <br>";
-} else {
-	echo "---------- NETDATA - NOO ---------- <br>";
-}
-echo "------------------------------","<br>";
-
-	
 ?>
 			
 		
