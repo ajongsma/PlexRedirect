@@ -173,6 +173,22 @@
 			
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+					<div data-netdata="system.cpu"
+						data-gauge-max-value="100"
+						data-title="CPU Usage"
+						data-chart-library="sparkline"
+						data-colors="#f8a918"
+						data-units="Percent"
+						data-width="100%"
+						data-height="180px"
+						data-after="-300"
+						data-points="300"
+					></div>
+					<p>Current Server CPU Usage</p></a>
+				</div>
+			
+				<div class="col-lg-4">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="system.io"
 						data-gauge-max-value="100"
 						data-title="Disk I/O"
