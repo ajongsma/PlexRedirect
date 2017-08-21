@@ -171,7 +171,25 @@
 					></div>
 					<p>Current Server CPU Usage</p></a>
 				</div>
+			
+				<div class="col-lg-4">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+					<div data-netdata="system.io"
+						data-gauge-max-value="100"
+						data-host="<?=$NETDATA_APP_URL?>"
+						data-title="Disk I/O"
+						data-chart-library="gauge"
+						data-colors="#f8a918"
+						data-units="Percent"
+						data-width="180px"
+						data-height="180px"
+						data-after="-300"
+						data-points="300"
+					></div>
+					<p>Current Server CPU Usage</p></a>
+				</div>
 
+			
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="system.ram"
