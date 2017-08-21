@@ -314,6 +314,32 @@
 					<p>rendered in <span id="time104">X</span> ms</p></a>
 				</div>
 			
+				<div class="col-lg-4">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+						<div data-netdata="system.ipv4"
+							data-chart-library="gauge"
+						     	data-title="Received Traffic"
+							data-dimensions="received"'
+							data-width="100%"
+							data-height="30px"
+							data-after="-300"
+							data-dt-element-name="time105"
+						></div>
+					<p>rendered in <span id="time105">X</span> ms</p></a>
+					
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+						<div data-netdata="system.ipv4"
+							data-chart-library="gauge"
+							data-title="Sent Traffic"
+							data-dimensions="sent"'
+							data-width="100%"
+							data-height="30px"
+							data-after="-300"
+							data-dt-element-name="time106"
+						></div>
+					<p>rendered in <span id="time106">X</span> ms</p></a>
+				</div>
+			
 
 
 <div class="netdata-container" style="margin-right: 10px;" data-netdata="system.ipv4"'
