@@ -292,6 +292,8 @@
 				PLEXPY_ENABLED-FALSE - 0000000111111112222222
 			<?php endif; ?>
 
+$NETDATA_SERVER: <?=$NETDATA_SERVER?> | $NETDATA_PORT: <?=$NETDATA_PORT?> | $NETDATA_APP_URL: <?=$NETDATA_APP_URL?> | $NETDATA_ENABLED: <?=$NETDATA_ENABLED?>
+
 <?php
 	If (checkserverport("pooky.local","19999") === TRUE) {
 		echo "---------- NETDATA - YES ---------- <br>";
