@@ -232,39 +232,41 @@
 							<p>Current Server Response Time</p></a>
 						</div>
 
-						<div class="col-lg-4">
-							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-								<div data-netdata="system.ipv4"
-									data-chart-library="sparkline"
-											data-title="Received Traffic"
-									data-dimensions="received"'
-									data-width="100%"
-									data-height="30px"
-									data-after="-300"
-									data-dt-element-name="time103"
-								></div>
-							<p>rendered in <span id="time103">X</span> ms</p></a>
-						</div>
-						
-						<div class="col-lg-4">
-							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-								<div data-netdata="system.ipv4"
-									data-chart-library="sparkline"
-									data-title="Sent Traffic"
-									data-dimensions="sent"'
-									data-width="100%"
-									data-height="30px"
-									data-after="-300"
-									data-dt-element-name="time104"
-								></div>
-							<p>rendered in <span id="time104">X</span> ms</p></a>
-						</div>
+						<?php if($NETDATA_IPV4_SPARKLINE_ENABLED == true) : ?>
+							<div class="col-lg-4">
+								<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+									<div data-netdata="system.ipv4"
+										data-chart-library="sparkline"
+										data-title="Received Traffic"
+										data-dimensions="received"'
+										data-width="100%"
+										data-height="30px"
+										data-after="-300"
+										data-dt-element-name="time103"
+									></div>
+								<p>rendered in <span id="time103">X</span> ms</p></a>
+							</div>
+
+							<div class="col-lg-4">
+								<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+									<div data-netdata="system.ipv4"
+										data-chart-library="sparkline"
+										data-title="Sent Traffic"
+										data-dimensions="sent"'
+										data-width="100%"
+										data-height="30px"
+										data-after="-300"
+										data-dt-element-name="time104"
+									></div>
+								<p>rendered in <span id="time104">X</span> ms</p></a>
+							</div>
+						<?php endif; ?>
 
 						<div class="col-lg-4">
 							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 								<div data-netdata="system.ipv4"
 									data-chart-library="gauge"
-											data-title="IPv4 Inbound"
+									data-title="IPv4 Inbound"
 									data-dimensions="received"'
 									data-width="180px"
 									data-height="180px"
