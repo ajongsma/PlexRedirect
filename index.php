@@ -292,6 +292,7 @@
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="system.ipv4"
 							data-chart-library="sparkline"
+						     	data-title="Received Traffic"
 							data-dimensions="received"'
 							data-width="100%"
 							data-height="30px"
@@ -303,6 +304,7 @@
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="system.ipv4"
 							data-chart-library="sparkline"
+							data-title="Sent Traffic"
 							data-dimensions="sent"'
 							data-width="100%"
 							data-height="30px"
