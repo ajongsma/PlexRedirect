@@ -1,7 +1,6 @@
 <?php
-  require('config.php');
-
-	// https://github.com/oshh94/PlexRedirect/blob/master/index.php
+  // https://github.com/oshh94/PlexRedirect/blob/master/index.php
+	require('config.php');
 
 	function checkserverport($server, $port) {	
 		$fp = @fsockopen($server, $port, $errno, $errstr, 5);
@@ -37,7 +36,7 @@
 		<script>var netdataTheme = 'slate';</script>
 		<script>var netdataDontStart = true;</script>
 		<script>var netdataNoBootstrap = true;</script>
-		<script type="text/javascript" src="http://pooky.local:19999/dashboard.js"></script>
+		<script type="text/javascript" src="http://<?=$NETDATA_APP_URL?>/dashboard.js"></script>
 		<script>
 			// destroy charts not shown (lowers memory on the browser)
 			NETDATA.options.current.destroy_on_hide = false;
