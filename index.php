@@ -300,7 +300,7 @@ function checkserverport2($server, $port) {
 }
 
 echo "------";
-echo checkserverport2("pooky.local","80");
+echo checkserverport2("pooky.local","80") + "<br>";
 echo checkserverport2("pooky.local","19999");
 echo checkserverport2("pooky.local","21");
 ?>
