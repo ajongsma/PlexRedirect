@@ -290,8 +290,8 @@ $NETDATA_SERVER: <?=$NETDATA_SERVER?> | $NETDATA_PORT: <?=$NETDATA_PORT?> | $NET
 
 <?php if($NETDATA_ENABLED == true) : ?>
 	<?php
-		If (checkserverport("pooky.local","19999") === TRUE) {
-		//If (checkserverport($NETDATA_SERVER,$NETDATA_PORT) === TRUE) {
+		//If (checkserverport("pooky.local","19999") === TRUE) {
+		If (checkserverport("$NETDATA_SERVER","$NETDATA_PORT") === TRUE) {
 			echo "---------- NETDATA - YES ---------- <br>";
 		} else {
 			echo "---------- NETDATA - NOO ---------- <br>";
