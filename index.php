@@ -171,7 +171,7 @@
 					<p>Current Server CPU Usage</p></a>
 				</div>
 
-<div class="netdata-container" style="margin-right: 10px;" data-netdata="system.cpu"'
+<div class="col-lg-4" style="margin-right: 10px;" data-netdata="system.cpu"'
 	+ ' data-chart-library="gauge"'
 	+ ' data-title="CPU"'
 	+ ' data-units="%"'
@@ -213,6 +213,18 @@
 					<p>Current Server RAM Usage</p></a>
 				</div>
 
+<div class="col-lg-4" style="margin-right: 10px;" data-netdata="system.ram"'
+	+ ' data-dimensions="used|buffers|active|wired"' // active and wired are FreeBSD stats
+	+ ' data-append-options="percentage"'
+	+ ' data-chart-library="easypiechart"'
+	+ ' data-title="Used RAM"'
+	+ ' data-units="%"'
+	+ ' data-easypiechart-max-value="100"'
+	+ ' data-width="9%"'
+	+ ' data-after="-' + duration.toString() + '"'
+	+ ' data-points="' + duration.toString() + '"'
+	+ ' role="application"></div>
+</center>
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="netdata.response_time"
@@ -318,11 +330,12 @@
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="system.ipv4"
 							data-chart-library="gauge"
-						     	data-title="Received Traffic"
+						     	data-title="IPv4 Inbound"
 							data-dimensions="received"'
 							data-width="180px"
 							data-height="180px"
-							data-after="-300"
+							data-after="-' + duration.toString() + '"'
+							data-points="' + duration.toString() + '"'
 							data-dt-element-name="time105"
 						></div>
 					<p>rendered in <span id="time105">X</span> ms</p></a>
@@ -330,7 +343,7 @@
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="system.ipv4"
 							data-chart-library="gauge"
-							data-title="Sent Traffic"
+							data-title="IPv4 Outbound"
 							data-dimensions="sent"'
 							data-width="180px"
 							data-height="180px"
@@ -343,38 +356,6 @@
 			
 
 
-<div class="netdata-container" style="margin-right: 10px;" data-netdata="system.ipv4"'
-	+ ' data-dimensions="received"'
-	+ ' data-chart-library="easypiechart"'
-	+ ' data-title="IPv4 Inbound"'
-	+ ' data-width="11%"'
-	+ ' data-before="0"'
-	+ ' data-after="-' + duration.toString() + '"'
-	+ ' data-points="' + duration.toString() + '"'
-	+ ' role="application"></div>
-
-<div class="netdata-container" style="margin-right: 10px;" data-netdata="system.ipv4"'
-	+ ' data-dimensions="sent"'
-	+ ' data-chart-library="easypiechart"'
-	+ ' data-title="IPv4 Outbound"'
-	+ ' data-width="11%"'
-	+ ' data-before="0"'
-	+ ' data-after="-' + duration.toString() + '"'
-	+ ' data-points="' + duration.toString() + '"'
-	+ ' role="application"></div>
-
-<div class="netdata-container" style="margin-right: 10px;" data-netdata="system.ram"'
-	+ ' data-dimensions="used|buffers|active|wired"' // active and wired are FreeBSD stats
-	+ ' data-append-options="percentage"'
-	+ ' data-chart-library="easypiechart"'
-	+ ' data-title="Used RAM"'
-	+ ' data-units="%"'
-	+ ' data-easypiechart-max-value="100"'
-	+ ' data-width="9%"'
-	+ ' data-after="-' + duration.toString() + '"'
-	+ ' data-points="' + duration.toString() + '"'
-	+ ' role="application"></div>
-</center>
 				
 				
 				
