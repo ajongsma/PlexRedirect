@@ -175,7 +175,6 @@
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="system.io"
 						data-gauge-max-value="100"
-						data-host="<?=$NETDATA_APP_URL?>"
 						data-title="Disk I/O"
 						data-chart-library="gauge"
 						data-colors="#f8a918"
@@ -195,7 +194,6 @@
 						data-dimensions="used|buffers|active|wired"
 						data-append-options="percentage"
 						data-gauge-max-value="100"
-						data-host="<?=$NETDATA_APP_URL?>"
 						data-title="RAM Usage"
 						data-chart-library="gauge"
 						data-colors="#f8a918"
@@ -211,7 +209,6 @@
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="netdata.response_time"
-						data-host="<?=$NETDATA_APP_URL?>"
 						data-title="Response Time"
 						data-chart-library="gauge"
 						data-colors="#f8a918"
@@ -228,7 +225,6 @@
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="system.load"
 							data-gauge-max-value="100"
-							data-host="<?=$NETDATA_APP_URL?>"
 							data-title="System Load Average"
 							data-chart-library="gauge"
 							data-colors="#f8a918"
@@ -247,7 +243,6 @@
 							data-dimensions="in"
 							data-common-max="netdata-net-in"
 							data-decimal-digits="0"
-							data-host="<?=$NETDATA_APP_URL?>"
 							data-title="Requests Traffic"
 							data-chart-library="easypiechart"
 							data-width="180px"
