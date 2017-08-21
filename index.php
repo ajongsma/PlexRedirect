@@ -157,6 +157,25 @@
 					<h4>Server stats, coming soon!</h4>
 				<?php } ?>
 			</div>
+
+			
+			
+<div class="col-lg-4">			
+	$NETDATA_SERVER: <?=$NETDATA_SERVER?> | $NETDATA_PORT: <?=$NETDATA_PORT?> | $NETDATA_APP_URL: <?=$NETDATA_APP_URL?> | $NETDATA_ENABLED: <?=$NETDATA_ENABLED?>
+	<?php if($NETDATA_ENABLED == true) : ?>
+		<?php
+			//If (checkserverport("pooky.local","19999") === TRUE) {
+			If (checkserverport("$NETDATA_SERVER","$NETDATA_PORT") === TRUE) {
+				echo "---------- NETDATA - YES ---------- <br>";
+			} else {
+				echo "---------- NETDATA - NOO ---------- <br>";
+			}
+		?>
+	<?php else : ?>
+		NETDATA_ENABLED-FALSE - 0000000111111112222222
+	<?php endif; ?>
+</div>
+			
 			
 			<div class="col-lg-4">
 			<a href="<?=$SERVER_STATS_URL?>" target="_top">
@@ -286,23 +305,6 @@
 				<p>rendered in <span id="time102">X</span> ms</p></a>
 			</div>
 
-$NETDATA_SERVER: <?=$NETDATA_SERVER?> | $NETDATA_PORT: <?=$NETDATA_PORT?> | $NETDATA_APP_URL: <?=$NETDATA_APP_URL?> | $NETDATA_ENABLED: <?=$NETDATA_ENABLED?>
-
-<?php if($NETDATA_ENABLED == true) : ?>
-	<?php
-		//If (checkserverport("pooky.local","19999") === TRUE) {
-		If (checkserverport("$NETDATA_SERVER","$NETDATA_PORT") === TRUE) {
-			echo "---------- NETDATA - YES ---------- <br>";
-		} else {
-			echo "---------- NETDATA - NOO ---------- <br>";
-		}
-	?>
-<?php else : ?>
-	NETDATA_ENABLED-FALSE - 0000000111111112222222
-<?php endif; ?>
-
-			
-		
 		
 		</div>
 	    
