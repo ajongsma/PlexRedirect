@@ -280,7 +280,7 @@
 			<?php endif; ?>
 
 <?php		
-function checkserverport2($server, $port) {	
+function checkserverport($server, $port) {	
 	$fp = @fsockopen($server, $port, $errno, $errstr, 5);
 	if ($fp)  {
 		//die('Proxy access not allowed.');
@@ -296,29 +296,14 @@ function checkserverport2($server, $port) {
 	return $status;
 }
 
-echo "------------------------------","<br>";
-echo checkserverport2("pooky.local","80"),"<br>";
-echo "----------","<br>";
-echo checkserverport2("pooky.local","19999"),"<br>";
-echo "----------","<br>";
-echo checkserverport2("pooky.local","21");
-echo "------------------------------","<br>";
-
-
-If (checkserverport2("pooky.local","80") === TRUE) {
-	echo "---------- YES ---------- <br>";
+If (checkserverport("pooky.local","19999") === TRUE) {
+	echo "---------- NETDATA - YES ---------- <br>";
 } else {
-	echo "---------- NOO ---------- <br>";
+	echo "---------- NETDATA - NOO ---------- <br>";
 }
 echo "------------------------------","<br>";
-If (checkserverport2("pooky.local","21") === TRUE) {
-	echo "---------- YES ---------- <br>";
-} else {
-	echo "---------- NOO ---------- <br>";
-}
-echo "------------------------------","<br>";
-			
-			
+
+	
 ?>
 			
 		
