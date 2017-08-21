@@ -170,14 +170,6 @@
 					></div>
 					<p>Current Server CPU Usage</p></a>
 				</div>
-
-<div class="col-lg-4" style="margin-right: 10px;" data-netdata="system.cpu"'
-	+ ' data-chart-library="gauge"'
-	+ ' data-title="CPU"'
-	+ ' data-units="%"'
-	+ ' data-gauge-max-value="100"'
-	+ ' data-width="20%"''
-	></div>
 			
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
@@ -194,52 +186,7 @@
 					></div>
 					<p>Current Server CPU Usage</p></a>
 				</div>
-
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-					<div data-netdata="system.ram"
-						data-dimensions="used|buffers|active|wired"
-						data-append-options="percentage"
-						data-gauge-max-value="100"
-						data-title="RAM Usage"
-						data-chart-library="gauge"
-						data-colors="#f8a918"
-						data-units="Percent"
-						data-width="180px"
-						data-height="180px"
-						data-after="-300"
-						data-points="300"
-					></div>
-					<p>Current Server RAM Usage</p></a>
-				</div>
-
-<div class="col-lg-4" style="margin-right: 10px;" data-netdata="system.ram"'
-	+ ' data-dimensions="used|buffers|active|wired"' // active and wired are FreeBSD stats
-	+ ' data-append-options="percentage"'
-	+ ' data-chart-library="easypiechart"'
-	+ ' data-title="Used RAM"'
-	+ ' data-units="%"'
-	+ ' data-easypiechart-max-value="100"'
-	+ ' data-width="9%"'
-	+ ' data-after="-' + duration.toString() + '"'
-	+ ' data-points="' + duration.toString() + '"'
-	+ ' role="application"></div>
-</center>
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-					<div data-netdata="netdata.response_time"
-						data-title="Response Time"
-						data-chart-library="gauge"
-						data-colors="#f8a918"
-						data-units="Milliseconds"
-						data-width="180px"
-						data-height="180px"
-						data-after="-300"
-						data-points="300"
-					></div>
-					<p>Current Server Response Time</p></a>
-				</div>
-
+			
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="system.load"
@@ -258,18 +205,35 @@
 
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="netdata.net"
-							data-dimensions="in"
-							data-common-max="netdata-net-in"
-							data-decimal-digits="0"
-							data-title="Requests Traffic"
-							data-chart-library="easypiechart"
-							data-width="180px"
-							data-height="180px"
-							data-after="-300"
-							data-points="300"
-						></div>
-					<p>Current Server System Netdata In</p></a>
+					<div data-netdata="system.ram"
+						data-dimensions="used|buffers|active|wired"
+						data-append-options="percentage"
+						data-gauge-max-value="100"
+						data-title="RAM Usage"
+						data-chart-library="gauge"
+						data-colors="#f8a918"
+						data-units="Percent"
+						data-width="180px"
+						data-height="180px"
+						data-after="-' + duration.toString() + '"'
+						data-points="' + duration.toString() + '"'
+					></div>
+					<p>Current Server RAM Usage</p></a>
+				</div>
+
+				<div class="col-lg-4">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+					<div data-netdata="netdata.response_time"
+						data-title="Response Time"
+						data-chart-library="gauge"
+						data-colors="#f8a918"
+						data-units="Milliseconds"
+						data-width="180px"
+						data-height="180px"
+						data-after="-300"
+						data-points="300"
+					></div>
+					<p>Current Server Response Time</p></a>
 				</div>
 			
 				<div class="col-lg-4">
