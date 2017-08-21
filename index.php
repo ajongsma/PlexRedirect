@@ -169,6 +169,22 @@
 
 						<div class="col-lg-4">
 							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+							<div data-netdata="system.cpu"
+								data-gauge-max-value="100"
+								data-title="System CPU"
+								data-chart-library="gauge"
+								data-colors="#f8a918"
+								data-units="Percent"
+								data-width="180px"
+								data-height="180px"
+								data-after="-' + duration.toString() + '"'
+								data-points="' + duration.toString() + '"'
+							></div>
+							<p>Current Server CPU Usage</p></a>
+						</div>
+			
+						<div class="col-lg-4">
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 							<div data-netdata="system.ram"
 								data-dimensions="used|buffers|active|wired"
 								data-append-options="percentage"
