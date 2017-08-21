@@ -156,10 +156,10 @@
 				echo "---------- NETDATA - YES ---------- <br>";
 			?>	
 				<div class="col-lg-4">
-				<a href="<?=$SERVER_STATS_URL?>" target="_top">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="system.cpu"
 						data-gauge-max-value="100"
-						data-host="<?=$SERVER_STATS_URL?>"
+						data-host="<?=$NETDATA_APP_URL?>"
 						data-title="CPU Usage"
 						data-chart-library="gauge"
 						data-colors="#f8a918"
@@ -173,12 +173,12 @@
 				</div>
 
 				<div class="col-lg-4">
-				<a href="<?=$SERVER_STATS_URL?>" target="_top">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="system.ram"
 						data-dimensions="used|buffers|active|wired"
 						data-append-options="percentage"
 						data-gauge-max-value="100"
-						data-host="<?=$SERVER_STATS_URL?>"
+						data-host="<?=$NETDATA_APP_URL?>"
 						data-title="RAM Usage"
 						data-chart-library="gauge"
 						data-colors="#f8a918"
@@ -192,9 +192,9 @@
 				</div>
 
 				<div class="col-lg-4">
-				<a href="<?=$SERVER_STATS_URL?>" target="_top">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="netdata.response_time"
-						data-host="<?=$SERVER_STATS_URL?>"
+						data-host="<?=$NETDATA_APP_URL?>"
 						data-title="Response Time"
 						data-chart-library="gauge"
 						data-colors="#f8a918"
@@ -208,10 +208,10 @@
 				</div>
 
 				<div class="col-lg-4">
-					<a href="<?=$SERVER_STATS_URL?>" target="_top">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="system.load"
 							data-gauge-max-value="100"
-							data-host="<?=$SERVER_STATS_URL?>"
+							data-host="<?=$NETDATA_APP_URL?>"
 							data-title="System Load Average"
 							data-chart-library="gauge"
 							data-colors="#f8a918"
@@ -225,12 +225,12 @@
 				</div>
 
 				<div class="col-lg-4">
-					<a href="<?=$SERVER_STATS_URL?>" target="_top">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="netdata.net"
 							data-dimensions="in"
 							data-common-max="netdata-net-in"
 							data-decimal-digits="0"
-							data-host="<?=$SERVER_STATS_URL?>"
+							data-host="<?=$NETDATA_APP_URL?>"
 							data-title="Requests Traffic"
 							data-chart-library="easypiechart"
 							data-width="180px"
@@ -242,7 +242,7 @@
 				</div>
 
 				<div class="col-lg-4">
-					<a href="<?=$SERVER_STATS_URL?>" target="_top">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="netdata.net"
 							data-dimensions="out"
 							data-common-max="netdata-net-out"
@@ -258,7 +258,7 @@
 				</div>
 
 				<div class="col-lg-4">
-					<a href="<?=$SERVER_STATS_URL?>" target="_top">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 						<div data-netdata="system.ipv4"
 							data-chart-library="sparkline"
 							data-width="100%"
