@@ -299,10 +299,13 @@ function checkserverport2($server, $port) {
 	return $status;
 }
 
-echo "------","<br>";
+echo "------------------------------","<br>";
 echo checkserverport2("pooky.local","80"),"<br>";
+echo "----------","<br>";
 echo checkserverport2("pooky.local","19999"),"<br>";
+echo "----------","<br>";
 echo checkserverport2("pooky.local","21");
+echo "------------------------------","<br>";
 ?>
 			
 		
