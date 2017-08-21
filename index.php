@@ -285,13 +285,10 @@ function checkserverport2($server, $port) {
 	if ($fp)  {
 		//die('Proxy access not allowed.');
 		echo "open: $port ";
-		$status = true;
+		$status = TRUE;
 		fclose($fp);
 	} else {
 		echo "closed: $port ";
-		if ($errno=61)  {
-			return FALSE;
-		}
 		$status = FALSE;
 	}
 	echo "errno : ", $errno, "<br>";
@@ -306,6 +303,14 @@ echo checkserverport2("pooky.local","19999"),"<br>";
 echo "----------","<br>";
 echo checkserverport2("pooky.local","21");
 echo "------------------------------","<br>";
+
+
+If checkserverport2("pooky.local","19999") Then {
+	echo "---------- YES ---------- <br>";
+} else {
+	echo "---------- NOO ---------- <br>";
+}
+
 ?>
 			
 		
