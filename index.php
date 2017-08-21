@@ -320,8 +320,8 @@
 							data-chart-library="gauge"
 						     	data-title="Received Traffic"
 							data-dimensions="received"'
-							data-width="100%"
-							data-height="30px"
+							data-width="180px"
+							data-height="180px"
 							data-after="-300"
 							data-dt-element-name="time105"
 						></div>
@@ -332,8 +332,8 @@
 							data-chart-library="gauge"
 							data-title="Sent Traffic"
 							data-dimensions="sent"'
-							data-width="100%"
-							data-height="30px"
+							data-width="180px"
+							data-height="180px"
 							data-after="-300"
 							data-dt-element-name="time106"
 						></div>
