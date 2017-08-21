@@ -170,6 +170,14 @@
 					></div>
 					<p>Current Server CPU Usage</p></a>
 				</div>
+
+<div class="netdata-container" style="margin-right: 10px;" data-netdata="system.cpu"'
+	+ ' data-chart-library="gauge"'
+	+ ' data-title="CPU"'
+	+ ' data-units="%"'
+	+ ' data-gauge-max-value="100"'
+	+ ' data-width="20%"''
+	></div>
 			
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
@@ -187,7 +195,6 @@
 					<p>Current Server CPU Usage</p></a>
 				</div>
 
-			
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="system.ram"
@@ -281,48 +288,31 @@
 					<p>rendered in <span id="time102">X</span> ms</p></a>
 				</div>
 			
-				
-<div class="netdata-container" style="margin-right: 10px;" data-netdata="disk_space._"'
-	+ ' data-dimensions="used"'
-	+ ' data-append-options="percentage"'
-	+ ' data-chart-library="easypiechart"'
-	+ ' data-title="Used sda"'
-	+ ' data-units="%"'
-	+ ' data-easypiechart-max-value="100"'
-	+ ' data-width="9%"'
-	+ ' data-before="0"'
-	+ ' data-after="-' + duration.toString() + '"'
-	+ ' data-points="' + duration.toString() + '"'
-	+ ' data-colors="#DD4400"'
-	+ ' role="application"></div>
+				<div class="col-lg-4">
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+						<div data-netdata="system.ipv4"
+							data-chart-library="sparkline"
+							data-dimensions="received"'
+							data-width="100%"
+							data-height="30px"
+							data-after="-300"
+							data-dt-element-name="time103"
+						></div>
+					<p>rendered in <span id="time103">X</span> ms</p></a>
+					
+					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+						<div data-netdata="system.ipv4"
+							data-chart-library="sparkline"
+							data-dimensions="sent"'
+							data-width="100%"
+							data-height="30px"
+							data-after="-300"
+							data-dt-element-name="time104"
+						></div>
+					<p>rendered in <span id="time104">X</span> ms</p></a>
+				</div>
+			
 
-<div class="netdata-container" style="margin-right: 10px;" data-netdata="system.io"'
-	+ ' data-dimensions="in"'
-	+ ' data-chart-library="easypiechart"'
-	+ ' data-title="Disk Read"'
-	+ ' data-width="11%"'
-	+ ' data-before="0"'
-	+ ' data-after="-' + duration.toString() + '"'
-	+ ' data-points="' + duration.toString() + '"'
-	+ ' role="application"></div>
-
-<div class="netdata-container" style="margin-right: 10px;" data-netdata="system.io"'
-	+ ' data-dimensions="out"'
-	+ ' data-chart-library="easypiechart"'
-	+ ' data-title="Disk Write"'
-	+ ' data-width="11%"'
-	+ ' data-before="0"'
-	+ ' data-after="-' + duration.toString() + '"'
-	+ ' data-points="' + duration.toString() + '"'
-	+ ' role="application"></div>
-
-<div class="netdata-container" style="margin-right: 10px;" data-netdata="system.cpu"'
-	+ ' data-chart-library="gauge"'
-	+ ' data-title="CPU"'
-	+ ' data-units="%"'
-	+ ' data-gauge-max-value="100"'
-	+ ' data-width="20%"''
-	></div>
 
 <div class="netdata-container" style="margin-right: 10px;" data-netdata="system.ipv4"'
 	+ ' data-dimensions="received"'
