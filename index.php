@@ -293,19 +293,6 @@
 			<?php endif; ?>
 
 <?php
-	function checkserverport2($server, $port) {	
-		$fp = @fsockopen($server, $port, $errno, $errstr, 5);
-		if ($fp)  {
-			//echo "open: $port ";
-			$status = TRUE;
-			fclose($fp);
-		} else {
-			//echo "closed: $port ";
-			$status = FALSE;
-		}
-		return $status;
-	}
-
 	If (checkserverport("pooky.local","19999") === TRUE) {
 		echo "---------- NETDATA - YES ---------- <br>";
 	} else {
