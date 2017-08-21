@@ -281,16 +281,7 @@
 					<p>rendered in <span id="time102">X</span> ms</p></a>
 				</div>
 			
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="net.gif0"
-							data-chart-library="area"
-							data-width="100%"
-							data-height="30px"
-							data-after="-300"
-						></div>
-					<p>rendered in <span id="time102">X</span> ms</p></a>
-				</div>
+				
 
 				
 				
