@@ -294,14 +294,14 @@ function checkserverport2($server, $port) {
 		}
 		$status = FALSE;
 	}
-	echo $errno;
-	echo $errstr;
+	echo "errno : ", $errno, "<br>";
+	echo "errstr : ", $errstr;
 	return $status;
 }
 
-echo "------","<br><br>";
-echo checkserverport2("pooky.local","80") + "<br><br>";
-echo checkserverport2("pooky.local","19999");
+echo "------","<br>";
+echo checkserverport2("pooky.local","80"),"<br>";
+echo checkserverport2("pooky.local","19999"),"<br>";
 echo checkserverport2("pooky.local","21");
 ?>
 			
