@@ -168,7 +168,7 @@
 			//If (checkserverport("pooky.local","19999") === TRUE) {
 			If (checkserverport("$NETDATA_SERVER","$NETDATA_PORT") === TRUE) {
 				echo "---------- NETDATA - YES ---------- <br>";
-				
+			?>	
 				<div class="col-lg-4">
 				<a href="<?=$SERVER_STATS_URL?>" target="_top">
 					<div data-netdata="system.cpu"
@@ -298,7 +298,7 @@
 				</div>				
 				
 				
-				
+		<?php	
 			} else {
 				echo "---------- NETDATA - NOO ---------- <br>";
 			}
