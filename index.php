@@ -159,7 +159,6 @@
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 					<div data-netdata="system.cpu"
 						data-gauge-max-value="100"
-						data-host="<?=$NETDATA_APP_URL?>"
 						data-title="CPU Usage"
 						data-chart-library="gauge"
 						data-colors="#f8a918"
