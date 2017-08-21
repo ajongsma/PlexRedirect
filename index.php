@@ -305,7 +305,7 @@ echo checkserverport2("pooky.local","21");
 echo "------------------------------","<br>";
 
 
-If checkserverport2("pooky.local","19999") Then {
+If (checkserverport2("pooky.local","19999") {
 	echo "---------- YES ---------- <br>";
 } else {
 	echo "---------- NOO ---------- <br>";
