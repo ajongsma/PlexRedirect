@@ -145,185 +145,156 @@
 				</a>
 			</div>
 
-			
-			
-
-	$NETDATA_SERVER: <?=$NETDATA_SERVER?> | $NETDATA_PORT: <?=$NETDATA_PORT?> | $NETDATA_APP_URL: <?=$NETDATA_APP_URL?> | $NETDATA_ENABLED: <?=$NETDATA_ENABLED?>
-	<?php if($NETDATA_ENABLED == true) : ?>
-		<?php
-			//If (checkserverport("pooky.local","19999") === TRUE) {
-			If (checkserverport("$NETDATA_SERVER","$NETDATA_PORT") === TRUE) {
-				echo "---------- NETDATA - YES ---------- <br>";
-			?>	
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-					<div data-netdata="system.cpu"
-						data-gauge-max-value="100"
-						data-title="CPU Usage"
-						data-chart-library="gauge"
-						data-colors="#f8a918"
-						data-units="Percent"
-						data-width="180px"
-						data-height="180px"
-						data-after="-300"
-						data-points="300"
-					></div>
-					<p>Current Server CPU Usage</p></a>
-				</div>
-			
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-					<div data-netdata="system.cpu"
-						data-sparkline-max-value="100"
-						data-title="CPU Usage"
-						data-chart-library="sparkline"
-						data-colors="#f8a918"
-						data-units="Percent"
-						data-width="100%"
-						data-height="60px"
-						data-after="-300"
-						data-points="300"
-					></div>
-					<p>Current Server CPU Usage</p></a>
-				</div>
-			
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-					<div data-netdata="system.io"
-						data-gauge-max-value="100"
-						data-title="Disk I/O"
-						data-chart-library="gauge"
-						data-colors="#f8a918"
-						data-units="Percent"
-						data-width="180px"
-						data-height="180px"
-						data-after="-300"
-						data-points="300"
-					></div>
-					<p>Current Server CPU Usage</p></a>
-				</div>
-			
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="system.load"
-							data-gauge-max-value="100"
-							data-title="System Load Average"
-							data-chart-library="gauge"
-							data-colors="#f8a918"
-							data-units="Percent"
-							data-width="180px"
-							data-height="180px"
-							data-after="-300"
-							data-points="300"
+			<?php if($NETDATA_ENABLED == true) : ?>
+				<?php
+					//If (checkserverport("pooky.local","19999") === TRUE) {
+					If (checkserverport("$NETDATA_SERVER","$NETDATA_PORT") === TRUE) {
+						echo "---------- NETDATA - YES ---------- <br>";
+					?>	
+						<div class="col-lg-4">
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+							<div data-netdata="system.cpu"
+								data-gauge-max-value="100"
+								data-title="CPU Usage"
+								data-chart-library="gauge"
+								data-colors="#f8a918"
+								data-units="Percent"
+								data-width="180px"
+								data-height="180px"
+								data-after="-300"
+								data-points="300"
 							></div>
-					<p>Current Server System Load Average</p></a>
-				</div>
+							<p>Current Server CPU Usage</p></a>
+						</div>
+			
+					<div class="col-lg-4">
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+								<div data-netdata="system.load"
+									data-gauge-max-value="100"
+									data-title="System Load Average"
+									data-chart-library="gauge"
+									data-colors="#f8a918"
+									data-units="Percent"
+									data-width="180px"
+									data-height="180px"
+									data-after="-300"
+									data-points="300"
+									></div>
+							<p>Current Server System Load Average</p></a>
+						</div>
 
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-					<div data-netdata="system.ram"
-						data-dimensions="used|buffers|active|wired"
-						data-append-options="percentage"
-						data-gauge-max-value="100"
-						data-title="RAM Usage"
-						data-chart-library="gauge"
-						data-colors="#f8a918"
-						data-units="Percent"
-						data-width="180px"
-						data-height="180px"
-						data-after="-' + duration.toString() + '"'
-						data-points="' + duration.toString() + '"'
-					></div>
-					<p>Current Server RAM Usage</p></a>
-				</div>
+						<div class="col-lg-4">
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+							<div data-netdata="system.io"
+								data-gauge-max-value="100"
+								data-title="Disk I/O"
+								data-chart-library="gauge"
+								data-colors="#f8a918"
+								data-units="Percent"
+								data-width="180px"
+								data-height="180px"
+								data-after="-300"
+								data-points="300"
+							></div>
+							<p>Current Server CPU Usage</p></a>
+						</div>
 
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-					<div data-netdata="netdata.response_time"
-						data-title="Response Time"
-						data-chart-library="gauge"
-						data-colors="#f8a918"
-						data-units="Milliseconds"
-						data-width="180px"
-						data-height="180px"
-						data-after="-300"
-						data-points="300"
-					></div>
-					<p>Current Server Response Time</p></a>
-				</div>
-			
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="system.ipv4"
-							data-chart-library="sparkline"
-						     	data-title="Received Traffic"
-							data-dimensions="received"'
-							data-width="100%"
-							data-height="30px"
-							data-after="-300"
-							data-dt-element-name="time103"
-						></div>
-					<p>rendered in <span id="time103">X</span> ms</p></a>
-					
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="system.ipv4"
-							data-chart-library="sparkline"
-							data-title="Sent Traffic"
-							data-dimensions="sent"'
-							data-width="100%"
-							data-height="30px"
-							data-after="-300"
-							data-dt-element-name="time104"
-						></div>
-					<p>rendered in <span id="time104">X</span> ms</p></a>
-				</div>
-			
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="system.ipv4"
-							data-chart-library="gauge"
-						     	data-title="IPv4 Inbound"
-							data-dimensions="received"'
-							data-width="180px"
-							data-height="180px"
-							data-after="-' + duration.toString() + '"'
-							data-points="' + duration.toString() + '"'
-							data-dt-element-name="time105"
-						></div>
-					<p>rendered in <span id="time105">X</span> ms</p></a>
-					
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="system.ipv4"
-							data-chart-library="gauge"
-							data-title="IPv4 Outbound"
-							data-dimensions="sent"'
-							data-width="180px"
-							data-height="180px"
-							data-after="-' + duration.toString() + '"'
-							data-points="' + duration.toString() + '"'
-							data-dt-element-name="time106"
-						></div>
-					<p>rendered in <span id="time106">X</span> ms</p></a>
-				</div>
+						<div class="col-lg-4">
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+							<div data-netdata="system.ram"
+								data-dimensions="used|buffers|active|wired"
+								data-append-options="percentage"
+								data-gauge-max-value="100"
+								data-title="RAM Usage"
+								data-chart-library="gauge"
+								data-colors="#f8a918"
+								data-units="Percent"
+								data-width="180px"
+								data-height="180px"
+								data-after="-' + duration.toString() + '"'
+								data-points="' + duration.toString() + '"'
+							></div>
+							<p>Current Server RAM Usage</p></a>
+						</div>
+
+						<div class="col-lg-4">
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+							<div data-netdata="netdata.response_time"
+								data-title="Response Time"
+								data-chart-library="gauge"
+								data-colors="#f8a918"
+								data-units="Milliseconds"
+								data-width="180px"
+								data-height="180px"
+								data-after="-300"
+								data-points="300"
+							></div>
+							<p>Current Server Response Time</p></a>
+						</div>
+
+						<div class="col-lg-4">
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+								<div data-netdata="system.ipv4"
+									data-chart-library="sparkline"
+											data-title="Received Traffic"
+									data-dimensions="received"'
+									data-width="100%"
+									data-height="30px"
+									data-after="-300"
+									data-dt-element-name="time103"
+								></div>
+							<p>rendered in <span id="time103">X</span> ms</p></a>
+
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+								<div data-netdata="system.ipv4"
+									data-chart-library="sparkline"
+									data-title="Sent Traffic"
+									data-dimensions="sent"'
+									data-width="100%"
+									data-height="30px"
+									data-after="-300"
+									data-dt-element-name="time104"
+								></div>
+							<p>rendered in <span id="time104">X</span> ms</p></a>
+						</div>
+
+						<div class="col-lg-4">
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+								<div data-netdata="system.ipv4"
+									data-chart-library="gauge"
+											data-title="IPv4 Inbound"
+									data-dimensions="received"'
+									data-width="180px"
+									data-height="180px"
+									data-after="-' + duration.toString() + '"'
+									data-points="' + duration.toString() + '"'
+									data-dt-element-name="time105"
+								></div>
+							<p>rendered in <span id="time105">X</span> ms</p></a>
+
+							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
+								<div data-netdata="system.ipv4"
+									data-chart-library="gauge"
+									data-title="IPv4 Outbound"
+									data-dimensions="sent"'
+									data-width="180px"
+									data-height="180px"
+									data-after="-' + duration.toString() + '"'
+									data-points="' + duration.toString() + '"'
+									data-dt-element-name="time106"
+								></div>
+							<p>rendered in <span id="time106">X</span> ms</p></a>
+						</div>
+				<?php	
+					} else {
+						echo "---------- NETDATA - NOO ---------- <br>";
+					}
+				?>
+			<?php else : ?>
+				NETDATA_ENABLED-FALSE - 0000000111111112222222
+			<?php endif; ?>
 			
 
-
-				
-				
-				
-		<?php	
-			} else {
-				echo "---------- NETDATA - NOO ---------- <br>";
-			}
-		?>
-	<?php else : ?>
-		NETDATA_ENABLED-FALSE - 0000000111111112222222
-	<?php endif; ?>
-			
-			
-			
-
-		
 		</div>
 	    
 		<div class="row mt centered">
