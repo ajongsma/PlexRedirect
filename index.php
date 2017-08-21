@@ -294,7 +294,7 @@
 
 $NETDATA_SERVER: <?=$NETDATA_SERVER?> | $NETDATA_PORT: <?=$NETDATA_PORT?> | $NETDATA_APP_URL: <?=$NETDATA_APP_URL?> | $NETDATA_ENABLED: <?=$NETDATA_ENABLED?>
 
-<?php if(NETDATA_ENABLED == true) : ?>
+<?php if($NETDATA_ENABLED == true) : ?>
 	<?php
 		If (checkserverport("pooky.local","19999") === TRUE) {
 			echo "---------- NETDATA - YES ---------- <br>";
