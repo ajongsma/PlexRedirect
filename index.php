@@ -271,34 +271,6 @@
 						></div>
 					<p>Current Server System Netdata In</p></a>
 				</div>
-
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="netdata.net"
-							data-dimensions="out"
-							data-common-max="netdata-net-out"
-							data-decimal-digits="0"
-							data-title="Requests Traffic"
-							data-chart-library="easypiechart"
-							data-width="180px"
-							data-height="100%"
-							data-after="-300"
-							data-points="300"
-						></div>
-					<p>Current Server System Netdata Out</p></a>
-				</div>
-
-				<div class="col-lg-4">
-					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
-						<div data-netdata="system.ipv4"
-							data-chart-library="sparkline"
-							data-width="100%"
-							data-height="30px"
-							data-after="-300"
-							data-dt-element-name="time102"
-						></div>
-					<p>rendered in <span id="time102">X</span> ms</p></a>
-				</div>
 			
 				<div class="col-lg-4">
 					<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
