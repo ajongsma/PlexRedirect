@@ -2,6 +2,19 @@
   require('config.php');
 
 	// https://github.com/oshh94/PlexRedirect/blob/master/index.php
+
+	function checkserverport($server, $port) {	
+		$fp = @fsockopen($server, $port, $errno, $errstr, 5);
+		if ($fp)  {
+			//echo "open: $port ";
+			$status = TRUE;
+			fclose($fp);
+		} else {
+			//echo "closed: $port ";
+			$status = FALSE;
+		}
+		return $status;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -44,23 +57,23 @@
 	
 		<script src="assets/js/ping.js"></script>
 		<script type='text/javascript'>
-		HTMLElement.prototype.hasClass = function (className) {
-					if (this.classList) {
-							return this.classList.contains(className);
-					} else {
-							return (-1 < this.className.indexOf(className));
-					}
+			HTMLElement.prototype.hasClass = function (className) {
+				if (this.classList) {
+					return this.classList.contains(className);
+				} else {
+					return (-1 < this.className.indexOf(className));
+				}
 			};
 
 			HTMLElement.prototype.addClass = function (className) {
-					if (this.classList) {
-							this.classList.add(className);
-					} else if (!this.hasClass(className)) {
-							var classes = this.className.split(" ");
-							classes.push(className);
-							this.className = classes.join(" ");
-					}
-					return this;
+				if (this.classList) {
+					this.classList.add(className);
+				} else if (!this.hasClass(className)) {
+					var classes = this.className.split(" ");
+					classes.push(className);
+					this.className = classes.join(" ");
+				}
+				return this;
 			};
 
 			HTMLElement.prototype.removeClass = function (className) {
@@ -95,19 +108,6 @@
 						} 
 					}, timeout);
 			}
-			
-		function checkserverport($server, $port) {	
-			$fp = @fsockopen($server, $port, $errno, $errstr, 5);
-			if ($fp)  {
-				//echo "open: $port ";
-				$status = TRUE;
-				fclose($fp);
-			} else {
-				//echo "closed: $port ";
-				$status = FALSE;
-			}
-			return $status;
-		}	
 	</script>
 	
 	<title><?=ucfirst($SERVER_NAME)?></title>
@@ -292,7 +292,20 @@
 				PLEXPY_ENABLED-FALSE - 0000000111111112222222
 			<?php endif; ?>
 
-<?php		
+<?php
+	function checkserverport2($server, $port) {	
+		$fp = @fsockopen($server, $port, $errno, $errstr, 5);
+		if ($fp)  {
+			//echo "open: $port ";
+			$status = TRUE;
+			fclose($fp);
+		} else {
+			//echo "closed: $port ";
+			$status = FALSE;
+		}
+		return $status;
+	}
+
 	If (checkserverport("pooky.local","19999") === TRUE) {
 		echo "---------- NETDATA - YES ---------- <br>";
 	} else {
