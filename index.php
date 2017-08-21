@@ -145,6 +145,14 @@
 					<p>Powered by PlexPy.</p>
 				</a>
 			</div>
+			
+			<div class="col-lg-4">
+				<a href="//<?=$NETDATA_APP_URL?>" target="_top">
+					<img src="assets/img/icon-benefits-high-performance.svg" width="180" alt="">
+					<h4>Stats</h4>
+					<p>Powered by NetData.</p>
+				</a>
+			</div>
 
 			<?php if($NETDATA_ENABLED == true) : ?>
 				<?php
