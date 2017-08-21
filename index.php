@@ -334,7 +334,8 @@
 							data-dimensions="sent"'
 							data-width="180px"
 							data-height="180px"
-							data-after="-300"
+							data-after="-' + duration.toString() + '"'
+							data-points="' + duration.toString() + '"'
 							data-dt-element-name="time106"
 						></div>
 					<p>rendered in <span id="time106">X</span> ms</p></a>
