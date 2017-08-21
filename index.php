@@ -121,6 +121,7 @@
 <body bgcolor="#000000" onload="checkServer()" class="offline">
     <div class="container" id="link-bar">
 		<div class="row mt centered">
+			
 			<div class="col-lg-4">
 				<a href="//<?=$PLEX_APP_URL?>" target="_top">
 					<img src="assets/img/s01.png" width="180" alt="">
@@ -149,7 +150,6 @@
 				<?php
 					//If (checkserverport("pooky.local","19999") === TRUE) {
 					If (checkserverport("$NETDATA_SERVER","$NETDATA_PORT") === TRUE) {
-						echo "---------- NETDATA - YES ---------- <br>";
 					?>	
 						<div class="col-lg-4">
 							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
@@ -244,7 +244,9 @@
 									data-dt-element-name="time103"
 								></div>
 							<p>rendered in <span id="time103">X</span> ms</p></a>
-
+						</div>
+						
+						<div class="col-lg-4">
 							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 								<div data-netdata="system.ipv4"
 									data-chart-library="sparkline"
@@ -271,7 +273,9 @@
 									data-dt-element-name="time105"
 								></div>
 							<p>rendered in <span id="time105">X</span> ms</p></a>
-
+						</div>
+						
+						<div class="col-lg-4">
 							<a href="http://<?=$NETDATA_APP_URL?>" target="_top">
 								<div data-netdata="system.ipv4"
 									data-chart-library="gauge"
@@ -287,7 +291,7 @@
 						</div>
 				<?php	
 					} else {
-						echo "---------- NETDATA - NOO ---------- <br>";
+						echo "---------- NETDATA SERVER - NOT AVAILABLE ---------- <br>";
 					}
 				?>
 			<?php else : ?>
