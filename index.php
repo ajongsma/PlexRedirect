@@ -310,7 +310,15 @@ If (checkserverport2("pooky.local","80") === TRUE) {
 } else {
 	echo "---------- NOO ---------- <br>";
 }
-
+echo "------------------------------","<br>";
+If (checkserverport2("pooky.local","21") === TRUE) {
+	echo "---------- YES ---------- <br>";
+} else {
+	echo "---------- NOO ---------- <br>";
+}
+echo "------------------------------","<br>";
+			
+			
 ?>
 			
 		
